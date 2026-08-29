@@ -1,0 +1,6 @@
+{
+  "name": "SynaestheColor",
+  "description": "AI-powered emotional & scene synaesthesia color palette studio with real-time WCAG 2.1 accessibility auditing, interactive UI previews, and multi-format developer exports.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
