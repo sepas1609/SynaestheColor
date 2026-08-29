@@ -184,14 +184,20 @@ SynaestheColor implements rigorous colorimetric algorithms in [`src/utils/colorS
 ### 1. Relative Luminance ($L$)
 According to **WCAG 2.1 (W3C)** recommendations, relative luminance is computed on linearized sRGB channel values:
 
-$$R_{\text{lin}} = \begin{cases} \frac{R_{\text{sRGB}}}{12.92} & \text{if } R_{\text{sRGB}} \le 0.04045 \\ \left(\frac{R_{\text{sRGB}} + 0.055}{1.055}\right)^{2.4} & \text{otherwise} \end{cases}$$
+$$
+R_{\text{lin}} = \begin{cases} \frac{R_{\text{sRGB}}}{12.92} & \text{if } R_{\text{sRGB}} \le 0.04045 \\ \left(\frac{R_{\text{sRGB}} + 0.055}{1.055}\right)^{2.4} & \text{otherwise} \end{cases}
+$$
 
-$$L = 0.2126 \cdot R_{\text{lin}} + 0.7152 \cdot G_{\text{lin}} + 0.0722 \cdot B_{\text{lin}}$$
+$$
+L = 0.2126 \cdot R_{\text{lin}} + 0.7152 \cdot G_{\text{lin}} + 0.0722 \cdot B_{\text{lin}}
+$$
 
 ### 2. Contrast Ratio ($CR$)
 Given the relative luminance of the lighter color ($L_1$) and darker color ($L_2$):
 
-$$CR = \frac{L_1 + 0.05}{L_2 + 0.05}$$
+$$
+CR = \frac{L_1 + 0.05}{L_2 + 0.05}
+$$
 
 - **WCAG AA Normal Text**: $CR \ge 4.5:1$
 - **WCAG AA Large Text (18pt / 14pt bold)**: $CR \ge 3.0:1$
@@ -201,9 +207,11 @@ $$CR = \frac{L_1 + 0.05}{L_2 + 0.05}$$
 When a contrast violation occurs, the engine performs a bounded search through HSL lightness space ($L \in [0, 100]$), selecting the candidate with minimum perceptual delta $|\Delta L|$ that satisfies $CR \ge 4.5:1$.
 
 ### 4. Perceptual Color Difference ($\Delta E_{\text{CIE76}}$)
-Converts sRGB $\to$ CIE XYZ $\to$ CIE $L^*a^*b^*$ with D65 reference white, calculating Euclidean perceptual delta:
+Converts sRGB &rarr; CIE XYZ &rarr; CIE L\*a\*b\* with D65 reference white, calculating Euclidean perceptual delta:
 
-$$\Delta E = \sqrt{(\Delta L^*)^2 + (\Delta a^*)^2 + (\Delta b^*)^2}$$
+$$
+\Delta E_{\text{CIE76}} = \sqrt{(\Delta L^*)^2 + (\Delta a^*)^2 + (\Delta b^*)^2}
+$$
 
 ---
 
