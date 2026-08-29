@@ -17,6 +17,8 @@
   <b>Translate evocative scenes, emotional poetry, and cross-sensory memories into harmonized 5-role design token systems with mathematically validated accessibility.</b>
 </p>
 
+[📘 Complete User Guide](./USER_GUIDE.md) &nbsp;•&nbsp; [📐 Architecture](#-system-architecture) &nbsp;•&nbsp; [🔬 Color Science](#-color-science--wcag-mathematics) &nbsp;•&nbsp; [💻 Quick Start](#-getting-started) &nbsp;•&nbsp; [⚡ Token Exports](#-multi-format-developer-exports)
+
 ---
 
 </div>
@@ -24,7 +26,8 @@
 ## 📖 Table of Contents
 
 - [✨ Overview & Philosophy](#-overview--philosophy)
-- [🚀 Key Features](#-key-features)
+- [🚀 Key Capabilities](#-key-capabilities)
+- [📘 User Guide & Walkthrough](#-user-guide--walkthrough)
 - [📐 System Architecture](#-system-architecture)
 - [🔄 Interactive Data Flowchart](#-interactive-data-flowchart)
 - [🔬 Color Science & WCAG Mathematics](#-color-science--wcag-mathematics)
@@ -33,65 +36,99 @@
 - [🔌 API Endpoints](#-api-endpoints)
 - [📦 Multi-Format Developer Exports](#-multi-format-developer-exports)
 - [📂 Project Directory Structure](#-project-directory-structure)
-- [🤝 Contributing](#-contributing)
+- [🤝 Contributing & Community](#-contributing--community)
 - [📜 License](#-license)
 
 ---
 
 ## ✨ Overview & Philosophy
 
-**Synaesthesia** is a neurological phenomenon where stimulation of one sensory or cognitive pathway leads to involuntary experiences in a second pathway (e.g., *tasting words*, *hearing colors*, or *feeling the temperature of a visual mood*).
+**Synaesthesia** is a neurological condition where stimulation of one cognitive pathway triggers involuntary sensations in another (e.g., *tasting words*, *hearing chords as colors*, or *feeling the warmth of a visual texture*).
 
-**SynaestheColor** bridges cognitive synaesthesia and software engineering by transforming vivid prose (e.g., *"An abandoned Victorian greenhouse overgrown with glowing bioluminescent moss at dusk"*) into cohesive, production-ready digital color systems. Powered by **Google Gemini 3.7 Flash**, the engine interprets sensory triggers, temperature, and lighting to generate structured design tokens mapped to strict semantic roles, backed by real-time **WCAG 2.1 contrast compliance**, **color blindness matrices**, and **1-click auto-correction**.
+**SynaestheColor** bridges cognitive synaesthesia and digital design by transforming vivid descriptive text into production-ready color systems. Powered by **Google Gemini 3.7 Flash**, the engine interprets sensory triggers, temperature, and lighting to generate structured design tokens mapped to strict semantic roles, backed by real-time **WCAG 2.1 contrast compliance**, **hardware-accelerated color blindness matrices**, and **1-click auto-correction**.
 
 ```
-"Neon rain on cybernetic asphalt in Neo-Tokyo"
-                      ↓
-  [ Primary: Cyan #00F0FF ]  [ Accent: Magenta #FF007F ]  [ Background: Obsidian #090D16 ]
+"An abandoned Victorian greenhouse overgrown with glowing bioluminescent moss at dusk"
+                                          ↓
+┌──────────────┬──────────────┬──────────────┬──────────────┬──────────────┐
+│   Primary    │  Secondary   │    Accent    │  Background  │   Surface    │
+│ Biolum. Cyan │ Forest Moss  │ Amber Spore  │ Deep Bog     │ Iron Slate   │
+│   #00E5FF    │   #2E7D32    │   #FFB300    │   #0A120E    │   #14241C    │
+└──────────────┴──────────────┴──────────────┴──────────────┴──────────────┘
 ```
 
 ---
 
-## 🚀 Key Features
+## 🚀 Key Capabilities
 
-| Capability | Description |
-| :--- | :--- |
-| **🧠 Gemini 3.7 Flash Engine** | Generates 5 distinct color tokens with poetic rationales, psychological context, and sensory tags via Gemini structured JSON schema. |
-| **♿ WCAG 2.1 AAA/AA Matrix** | Evaluates real-time relative luminance ($L$) and contrast ratios across all foreground/background pairings. |
-| **🛠️ 1-Click Contrast Auto-Fix** | Automatically searches lightness spectra to calculate the nearest perceptually harmonious hex shade that passes WCAG AA ($4.5:1$) or AAA ($7.0:1$). |
-| **👁️ CVD Simulation Filters** | Embedded SVG color matrix filters simulating **Protanopia**, **Deuteranopia**, **Tritanopia**, and **Achromatopsia** across the entire UI workspace. |
-| **🔬 Multi-Space Color Lab** | Real-time conversions and calculations for **HEX**, **RGB**, **HSL**, **CMYK**, **HSV**, and **CIE $\Delta E$ (CIE76)** perceptual distance. |
-| **📱 Live Interactive Sandbox** | Instant preview across UI component cards, primary buttons, badges, statistics charts, and dual dark/light canvas modes. |
-| **⚡ Multi-Format Exporter** | One-click export to **CSS Custom Properties**, **Tailwind CSS v3 & v4 Themes**, **SCSS Maps**, **Figma/Design Token JSON**, and **Vector SVG Palettes**. |
-| **🌐 Multilingual Support** | Automatic multi-language scene translation and emotional preservation pipeline. |
-| **💾 Persistent Palette Vault** | Local timeline storage and curated community gallery for inspiration and rapid cloning. |
+### 🧠 Cross-Modal Sensory Prompt Engine
+- Interprets sensory descriptors (acoustic, tactile, olfactory, thermal, visual) via **Gemini 3.7 Flash**.
+- Strict JSON schema enforcement returns structured tokens with poetic rationales, psychological justifications, and mood tags.
+- Built-in multi-language auto-translation engine for international prompt refinement.
+
+### ♿ Real-Time WCAG 2.1 Contrast Matrix & 1-Click Auto-Fix
+- Live pairwise mathematical contrast calculation for all foreground/background combinations.
+- Real-time compliance badges for **WCAG AAA ($\ge 7.0:1$)**, **WCAG AA ($\ge 4.5:1$)**, and **AA Large ($\ge 3.0:1$)**.
+- **1-Click Auto-Fix**: Automatically finds the nearest perceptually harmonious lightness value that satisfies WCAG AA/AAA compliance without altering the hue.
+
+### 👁️ Universal Color Vision Deficiency (CVD) Simulation
+- Hardware-accelerated SVG matrix filters that transform the entire application into accurate simulations of:
+  - **Protanopia** (Red-blindness)
+  - **Deuteranopia** (Green-blindness)
+  - **Tritanopia** (Blue-blindness)
+  - **Achromatopsia** (Total monochromatic vision)
+
+### 🔬 Multi-Color Space Inspector & Delta-E Lab
+- Real-time conversion across **HEX**, **RGB**, **HSL**, **CMYK**, **HSV/HSB**, and photometric **Relative Luminance ($L$)**.
+- Calculates **CIE $\Delta E_{\text{CIE76}}$** perceptual color difference between all palette roles.
+
+### 📱 Live Component Sandbox & Dark/Light Canvas
+- Interactive live preview testing palette behavior across buttons, notification badges, cards, data charts, and typography.
+- Dual canvas mode toggles effortlessly between dark and light foundations.
+
+### ⚡ Multi-Format Developer Exports
+- Instant one-click copy and download for:
+  - **CSS Custom Properties** (`:root { ... }`)
+  - **Tailwind CSS v4 Theme** (`@theme { ... }`)
+  - **Tailwind CSS v3 Config** (`tailwind.config.js`)
+  - **SCSS Variables & Map** (`_palette.scss`)
+  - **Figma / Design Tokens JSON** (`tokens.json`)
+  - **Standalone Vector SVG Palette** (`palette.svg`)
+
+---
+
+## 📘 User Guide & Walkthrough
+
+For a step-by-step user handbook covering prompt engineering, harmony constraints, manual color editing, and code integration, please refer to:
+
+👉 **[Read the Full SynaestheColor User Guide](./USER_GUIDE.md)**
 
 ---
 
 ## 📐 System Architecture
 
-The following diagram represents the end-to-end component topology and runtime pipeline of SynaestheColor:
+The following diagram illustrates the component hierarchy and runtime pipeline:
 
 ```mermaid
 graph TB
-    subgraph Client ["Client Layer (React 19 + TypeScript + Vite)"]
+    subgraph Client ["Frontend Layer (React 19 + TypeScript + Vite)"]
         UI["Main Application Shell (App.tsx)"]
         PromptView["PromptSection.tsx<br/>- Sensory Input<br/>- Harmony Selector<br/>- Temperature Slider"]
-        PaletteView["PaletteDisplay.tsx<br/>- 5-Role Swatch Strip<br/>- Hex / Name / Rationale"]
+        PaletteView["PaletteDisplay.tsx<br/>- 5-Role Swatches<br/>- Hex / Name / Rationale"]
         AuditorView["AccessibilityAuditor.tsx<br/>- WCAG Contrast Grid<br/>- 1-Click Auto-Fix"]
-        ConverterView["ColorSpaceConverter.tsx<br/>- HEX / RGB / HSL / CMYK / HSV<br/>- Delta-E Inspector"]
-        PreviewView["InteractivePreview.tsx<br/>- Live Component Sandbox<br/>- Dark / Light Toggle"]
-        SVGBli["ColorBlindnessSVGFilters.tsx<br/>- Protanopia / Deuteranopia / Tritanopia SVG Matrix"]
+        ConverterView["ColorSpaceConverter.tsx<br/>- HEX / RGB / HSL / CMYK / HSV<br/>- Delta-E Lab"]
+        PreviewView["InteractivePreview.tsx<br/>- Live Component Sandbox<br/>- Dark / Light Canvas"]
+        SVGBli["ColorBlindnessSVGFilters.tsx<br/>- Protan / Deutan / Tritan / Achroma"]
         ExportView["ExportModal.tsx<br/>- CSS / Tailwind / SCSS / JSON / SVG"]
     end
 
     subgraph CoreEngine ["Color Science & State Engine (colorScience.ts)"]
         LuminanceEngine["Relative Luminance (W3C sRGB)"]
         ContrastCalculator["WCAG 2.1 Contrast Ratio Engine"]
-        AutoFixEngine["Perceptual Lightness Optimizer (Auto-Correction)"]
+        AutoFixEngine["Perceptual Lightness Optimizer"]
         ColorSpaceEngine["Color Space Converters (RGB/HSL/CMYK/HSV/Lab)"]
-        DeltaEEngine["CIE Delta-E Perceptual Difference Metric"]
-        FallbackEngine["Procedural Synaesthetic Heuristic Engine"]
+        DeltaEEngine["CIE Delta-E Perceptual Metric"]
+        FallbackEngine["Procedural Heuristic Engine"]
     end
 
     subgraph ServerLayer ["Backend & API Gateway (Express / Node.js)"]
@@ -136,7 +173,7 @@ graph TB
 
 ## 🔄 Interactive Data Flowchart
 
-The following sequence illustrates the transformation of an abstract sensory prompt into verified, accessible design tokens:
+The following sequence illustrates the end-to-end data transformation pipeline:
 
 ```mermaid
 sequenceDiagram
@@ -152,7 +189,7 @@ sequenceDiagram
     User->>Client: Selects Harmony (Triadic) & Temperature (0.7)
     Client->>Server: POST /api/generate-palette { prompt, harmony, temperature }
     
-    alt Gemini API Key Available
+    alt Gemini API Key Configured
         Server->>Gemini: generateContent(gemini-3.7-flash, systemInstruction, schema)
         Gemini-->>Server: JSON Palette Response (5 Roles + Rationales)
         Server-->>Client: { success: true, data: PaletteObject, latencyMs, tokensUsed }
@@ -207,10 +244,10 @@ $$
 When a contrast violation occurs, the engine performs a bounded search through HSL lightness space ($L \in [0, 100]$), selecting the candidate with minimum perceptual delta $|\Delta L|$ that satisfies $CR \ge 4.5:1$.
 
 ### 4. Perceptual Color Difference ($\Delta E_{\text{CIE76}}$)
-Converts sRGB &rarr; CIE XYZ &rarr; CIE L\*a\*b\* with D65 reference white, calculating Euclidean perceptual delta:
+Converts sRGB $\to$ CIE XYZ $\to$ CIE L\*a\*b\* with D65 reference white, calculating Euclidean perceptual delta:
 
 $$
-\Delta E_{\text{CIE76}} = \sqrt{(\Delta L^*)^2 + (\Delta a^*)^2 + (\Delta b^*)^2}
+\Delta E_{\text{CIE76}} = \sqrt{(\Delta L^{\ast})^2 + (\Delta a^{\ast})^2 + (\Delta b^{\ast})^2}
 $$
 
 ---
@@ -233,48 +270,37 @@ Every generated palette adheres to a standardized 5-role design token architectu
 
 ### Prerequisites
 - [Node.js](https://nodejs.org/) v20.0.0 or higher
-- `npm`, `pnpm`, or `bun`
+- `npm`, `pnpm`, `yarn`, or `bun`
 
-### Installation
+### Installation & Run
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/sepas1609/SynaestheColor.git
-   cd SynaestheColor
-   ```
+```bash
+# 1. Clone repository
+git clone https://github.com/sepas1609/SynaestheColor.git
+cd SynaestheColor
 
-2. **Install dependencies**:
-   ```bash
-   npm install
-   ```
+# 2. Install dependencies
+npm install
 
-3. **Set up Environment Variables**:
-   ```bash
-   cp .env.example .env
-   ```
-   Edit `.env` and supply your Gemini API key (optional — offline smart fallbacks operate automatically without a key):
-   ```env
-   GEMINI_API_KEY="AIzaSyYourGeminiApiKeyHere"
-   PORT=3000
-   ```
+# 3. Setup environment variables (optional for online Gemini API)
+cp .env.example .env
 
-4. **Start the local development server**:
-   ```bash
-   npm run dev
-   ```
-   Access the web app at `http://localhost:3000`.
+# 4. Start development server
+npm run dev
+```
 
-5. **Build for Production**:
-   ```bash
-   npm run build
-   npm start
-   ```
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Production Build
+
+```bash
+npm run build
+npm start
+```
 
 ---
 
 ## 🔌 API Endpoints
-
-The integrated backend provides high-performance endpoints:
 
 ### 1. `POST /api/generate-palette`
 Generates a structured 5-role synaesthetic color palette.
@@ -315,13 +341,11 @@ Generates a structured 5-role synaesthetic color palette.
 Translates and refines multilingual emotional prompts into vivid English prose for consistent sensory processing.
 
 ### 3. `GET /api/health`
-Health check status and server timestamp.
+Returns system health and server timestamp.
 
 ---
 
 ## 📦 Multi-Format Developer Exports
-
-SynaestheColor exports into multiple production-ready formats:
 
 ### CSS Custom Properties
 ```css
@@ -405,6 +429,7 @@ SynaestheColor/
 ├── LICENSE                      # MIT Open Source License
 ├── package.json                 # Project configuration & npm scripts
 ├── README.md                    # Project documentation & visual architecture
+├── USER_GUIDE.md                # Comprehensive step-by-step user handbook
 ├── server.ts                    # Backend Express service & Gemini integration
 ├── tsconfig.json                # TypeScript compiler configuration
 └── vite.config.ts               # Vite bundler & Tailwind v4 plugin config
@@ -412,17 +437,9 @@ SynaestheColor/
 
 ---
 
-## 🤝 Contributing
+## 🤝 Contributing & Community
 
-Contributions make the open-source community an inspiring place to learn, create, and share. Any contributions you make are **greatly appreciated**!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/SensoryImprovement`)
-3. Commit your Changes (`git commit -m 'feat: add sensory improvement'`)
-4. Push to the Branch (`git push origin feature/SensoryImprovement`)
-5. Open a Pull Request
-
-For detailed guidelines, see [CONTRIBUTING.md](./CONTRIBUTING.md).
+Contributions are welcome! Please read our [CONTRIBUTING.md](./CONTRIBUTING.md) and adhere to the [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md).
 
 ---
 
